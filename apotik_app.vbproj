@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B959B91E-4C2A-4725-B04E-69C803C03AC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VbDemo.My.MyApplication</StartupObject>
+    <RootNamespace>VbDemo</RootNamespace>
+    <AssemblyName>VbDemo</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>myapotek.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=5.1.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.Ribbon, Version=2.0.0.0, Culture=neutral, PublicKeyToken=928736e248aa81f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Windows.Forms.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessData\AccessDokter.vb" />
+    <Compile Include="AccessData\AccessPasien.vb" />
+    <Compile Include="AccessData\AccessPelanggan.vb" />
+    <Compile Include="AccessData\AccessPengguna.vb" />
+    <Compile Include="AccessData\AccessSales.vb" />
+    <Compile Include="AccessData\AccessTBLPerkiraan.vb" />
+    <Compile Include="AccessData\AccessSatuan.vb" />
+    <Compile Include="AccessData\AccessRak.vb" />
+    <Compile Include="AccessData\AccessGudang.vb" />
+    <Compile Include="AccessData\AccessProdusen.vb" />
+    <Compile Include="AccessData\AccessSupplier.vb" />
+    <Compile Include="AccessData\AccessJenis.vb" />
+    <Compile Include="AccessData\AccessSub.vb" />
+    <Compile Include="AccessData\AccessBarang.vb" />
+    <Compile Include="AccessData\AccessJasa.vb" />
+    <Compile Include="AccessData\AccessPaket.vb" />
+    <Compile Include="AccessData\DataBaseConnection.vb" />
+    <Compile Include="AccessData\DataControl.vb" />
+    <Compile Include="Api\name.vb" />
+    <Compile Include="Entity\ArusKas.vb" />
+    <Compile Include="Entity\BarangObat.vb" />
+    <Compile Include="Entity\Paket.vb" />
+    <Compile Include="Entity\Jasa.vb" />
+    <Compile Include="Entity\SubGolonganObat.vb" />
+    <Compile Include="Entity\JenisGolonganObat.vb" />
+    <Compile Include="Entity\Supplier.vb" />
+    <Compile Include="Entity\Produsen.vb" />
+    <Compile Include="Entity\Gudang.vb" />
+    <Compile Include="Entity\Rak.vb" />
+    <Compile Include="Entity\Satuan.vb" />
+    <Compile Include="Entity\Dokter.vb" />
+    <Compile Include="Entity\LapLabaRugi.vb" />
+    <Compile Include="Entity\LapModal.vb" />
+    <Compile Include="Entity\LapModalDetail.vb" />
+    <Compile Include="Entity\LapNeraca.vb" />
+    <Compile Include="Entity\LapNeracaSaldo.vb" />
+    <Compile Include="Entity\OperationType.vb" />
+    <Compile Include="Entity\Pasien.vb" />
+    <Compile Include="Entity\Pelanggan.vb" />
+    <Compile Include="Entity\Pengguna.vb" />
+    <Compile Include="Entity\Sales.vb" />
+    <Compile Include="Entity\TBLJurnal.vb" />
+    <Compile Include="Entity\TBLJurnaldihapus.vb" />
+    <Compile Include="Entity\TBLPerkiraan.vb" />
+    <Compile Include="Entity\TBLPerusahaan.vb" />
+    <Compile Include="Entity\TBLUser.vb" />
+    <Compile Include="FormInput\frmMstPaket.Designer.vb">
+      <DependentUpon>frmMstPaket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstPaket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstSatuan.Designer.vb">
+      <DependentUpon>frmMstSatuan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstSatuan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstRak.Designer.vb">
+      <DependentUpon>frmMstRak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstRak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstGudang.Designer.vb">
+      <DependentUpon>frmMstGudang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstGudang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstProdusen.Designer.vb">
+      <DependentUpon>frmMstProdusen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstProdusen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstSupplier.Designer.vb">
+      <DependentUpon>frmMstSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstJenisGolObat.Designer.vb">
+      <DependentUpon>frmMstJenisGolObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstJenisGolObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstSubGolObat.Designer.vb">
+      <DependentUpon>frmMstSubGolObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstSubGolObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstBarangObat.Designer.vb">
+      <DependentUpon>frmMstBarangObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstBarangObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstJasa.Designer.vb">
+      <DependentUpon>frmMstJasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstJasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmInputAkun.Designer.vb">
+      <DependentUpon>frmInputAkun.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmInputAkun.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstDokter.Designer.vb">
+      <DependentUpon>frmMstDokter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstDokter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstPasien.Designer.vb">
+      <DependentUpon>frmMstPasien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstPasien.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstPelanggan.Designer.vb">
+      <DependentUpon>frmMstPelanggan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstPelanggan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstPengguna.Designer.vb">
+      <DependentUpon>frmMstPengguna.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstPengguna.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmMstSales.Designer.vb">
+      <DependentUpon>frmMstSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmMstSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmPaket.Designer.vb">
+      <DependentUpon>frmPaket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmPaket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmSatuan.Designer.vb">
+      <DependentUpon>frmSatuan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmSatuan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmRak.Designer.vb">
+      <DependentUpon>frmRak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmRak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmGudang.Designer.vb">
+      <DependentUpon>frmGudang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmGudang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmProdusen.Designer.vb">
+      <DependentUpon>frmProdusen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmProdusen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmSupplier.Designer.vb">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmJenisGolObat.Designer.vb">
+      <DependentUpon>frmJenisGolObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmJenisGolObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmSubGolObat.Designer.vb">
+      <DependentUpon>frmSubGolObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmSubGolObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmBarangObat.Designer.vb">
+      <DependentUpon>frmBarangObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmBarangObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmJasa.Designer.vb">
+      <DependentUpon>frmJasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmJasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmApi.Designer.vb">
+      <DependentUpon>frmApi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmApi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmDokter.Designer.vb">
+      <DependentUpon>frmDokter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmDokter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmPasien.Designer.vb">
+      <DependentUpon>frmPasien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmPasien.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmPelanggan.Designer.vb">
+      <DependentUpon>frmPelanggan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmPelanggan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmPengguna.Designer.vb">
+      <DependentUpon>frmPengguna.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmPengguna.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmPerkiraan.Designer.vb">
+      <DependentUpon>frmPerkiraan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmPerkiraan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmSales.Designer.vb">
+      <DependentUpon>frmSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\General.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormInput\frmInputAkun.resx">
+      <DependentUpon>frmInputAkun.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstDokter.resx">
+      <DependentUpon>frmMstDokter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstGudang.resx">
+      <DependentUpon>frmMstGudang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstPasien.resx">
+      <DependentUpon>frmMstPasien.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstPelanggan.resx">
+      <DependentUpon>frmMstPelanggan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstProdusen.resx">
+      <DependentUpon>frmMstProdusen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstRak.resx">
+      <DependentUpon>frmMstRak.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstSales.resx">
+      <DependentUpon>frmMstSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstSatuan.resx">
+      <DependentUpon>frmMstSatuan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmApi.resx">
+      <DependentUpon>frmApi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmDokter.resx">
+      <DependentUpon>frmDokter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmGudang.resx">
+      <DependentUpon>frmGudang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmProdusen.resx">
+      <DependentUpon>frmProdusen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmRak.resx">
+      <DependentUpon>frmRak.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmSatuan.resx">
+      <DependentUpon>frmSatuan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmPasien.resx">
+      <DependentUpon>frmPasien.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmPelanggan.resx">
+      <DependentUpon>frmPelanggan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmPerkiraan.resx">
+      <DependentUpon>frmPerkiraan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmSales.resx">
+      <DependentUpon>frmSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addons32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bold16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borderbottom16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casing16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copyformat16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraseformat16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontcolor16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontsizedecrease16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontsizeincrease16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goto16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hilight16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indentdecrease16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indentdecrease161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indentincrease16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invisiblechars16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multilevellist16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newdocument32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderedlist16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pageblank16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paragraphspacing16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastelink16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastespecial16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prepare32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printpreview32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printquick16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printquick32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\publish32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replace16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strikethru16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\style16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stylechange32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\styleset16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subindex16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\superindex16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textaligncenter16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textalignjustify16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textalignleft16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textalignright16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\themefont.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underline16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unorderedlist16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word2003doc32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worddocument32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordtemplate32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="myapotek.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

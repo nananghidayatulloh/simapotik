@@ -1,0 +1,8 @@
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.vbprojResolveAssemblyReference.cache
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.DemoForm.resources
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.Resources.resources
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.vbproj.GenerateResource.Cache
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\bin\Debug\VbDemo.exe
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\bin\Debug\VbDemo.pdb
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.exe
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.pdb

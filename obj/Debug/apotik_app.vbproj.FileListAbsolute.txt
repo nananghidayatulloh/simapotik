@@ -1,0 +1,68 @@
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\bin\Debug\VbDemo.exe
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\bin\Debug\VbDemo.pdb
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\apotik_app.vbprojResolveAssemblyReference.cache
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.frmMain.resources
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.Resources.resources
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\apotik_app.vbproj.GenerateResource.Cache
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.exe
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.pdb
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.frmDokter.resources
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.frmPasien.resources
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.frmSales.resources
+C:\Users\nanang\Documents\Visual Studio 2010\VbDemo\obj\Debug\VbDemo.frmPerkiraan.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\bin\Debug\VbDemo.exe
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\bin\Debug\VbDemo.pdb
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmInputAkun.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmApi.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmDokter.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmMain.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmPasien.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmPerkiraan.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmSales.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.Resources.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\apotik_app.vbproj.GenerateResource.Cache
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.exe
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.pdb
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\apotik_app.vbprojResolveAssemblyReference.cache
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmMstDokter.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmPelanggan.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmMstPelanggan.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmMstPasien.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmMstSales.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmMstSatuan.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmMstGudang.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmMstRak.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmRak.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmGudang.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmSatuan.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmMstProdusen.resources
+C:\Users\nanang\Documents\Visual Studio 2010\Projects\VbDemo\obj\Debug\VbDemo.frmProdusen.resources
+E:\Projectsvb\Projects2010\VbDemo\bin\Debug\VbDemo.exe
+E:\Projectsvb\Projects2010\VbDemo\bin\Debug\VbDemo.pdb
+E:\Projectsvb\Projects2010\VbDemo\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+E:\Projectsvb\Projects2010\VbDemo\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.xml
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\apotik_app.vbprojResolveAssemblyReference.cache
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmInputAkun.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmMstDokter.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmMstGudang.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmMstPasien.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmMstPelanggan.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmMstProdusen.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmMstRak.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmMstSales.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmMstSatuan.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmApi.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmDokter.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmGudang.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmProdusen.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmRak.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmSatuan.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmMain.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmPasien.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmPelanggan.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmPerkiraan.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.frmSales.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.Resources.resources
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\apotik_app.vbproj.GenerateResource.Cache
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.exe
+E:\Projectsvb\Projects2010\VbDemo\obj\Debug\VbDemo.pdb
