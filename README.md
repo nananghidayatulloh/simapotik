@@ -1,0 +1,2 @@
+# simapotik
+myapotik desktop version
