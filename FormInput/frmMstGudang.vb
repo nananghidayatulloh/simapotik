@@ -44,7 +44,7 @@
             TextBox1.ReadOnly = False
             TextBox6.ReadOnly = False
             Me.Text = "Input Data Gudang"
-
+            clearText()
         End If
     End Sub
 

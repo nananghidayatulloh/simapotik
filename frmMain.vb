@@ -8,6 +8,7 @@ Public Class frmMain
         Return Color.FromKnownColor(CType(r.[Next](1, 150), KnownColor))
     End Function
     Private Sub MainForm_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+        'ToolStripStatusLabel2.Text = DateTime.Now.ToString("hh:mm:ss")
     End Sub
 
     Private Sub ribbonOrbOptionButton1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ribbonOrbOptionButton1.Click
@@ -158,5 +159,19 @@ Public Class frmMain
         x.MaximizeBox = False
         x.WindowState = FormWindowState.Maximized
         x.Show()
+    End Sub
+
+    Private Sub RibbonButton16_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RibbonButton16.Click
+        Dim x As New frmJasa
+        x.MdiParent = Me
+        x.ControlBox = False
+        x.MinimizeBox = False
+        x.MaximizeBox = False
+        x.WindowState = FormWindowState.Maximized
+        x.Show()
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        ToolStripStatusLabel2.Text = DateTime.Now.ToString("dd MMM yyyy hh:mm:ss")
     End Sub
 End Class

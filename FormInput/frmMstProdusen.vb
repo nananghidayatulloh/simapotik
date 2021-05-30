@@ -41,7 +41,10 @@
             fillData(data)
 
         ElseIf opt = 1 Then
+            TextBox1.ReadOnly = False
+            TextBox6.ReadOnly = False
             Me.Text = "Input Data Produsen"
+            clearText()
 
         End If
     End Sub

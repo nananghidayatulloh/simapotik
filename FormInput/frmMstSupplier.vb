@@ -62,6 +62,8 @@
 
         ElseIf opt = 1 Then
             Me.Text = "Input Data Sales"
+            TextBox1.ReadOnly = False
+            clearText()
 
         End If
     End Sub

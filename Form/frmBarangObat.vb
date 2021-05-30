@@ -18,6 +18,7 @@
         ListView1.View = View.Details
         ListView1.GridLines = True
         ListView1.FullRowSelect = True
+        ListView1.OwnerDraw = True
 
         'menambahkan header kolom
         ListView1.Columns.Add("", 0, HorizontalAlignment.Center)
@@ -53,7 +54,9 @@
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
+        For i = 0 To ListView1.Items.Count - 2 Step 2
+            ListView1.Items(i + 1).BackColor = Drawing.Color.Azure
+        Next i
     End Sub
 
     Private Sub frmBarangObat_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -169,5 +172,33 @@
     Private Sub RefreshDataToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshDataToolStripMenuItem.Click
         FillListview()
 
+    End Sub
+
+    Private Sub ListView1_DrawColumnHeader(ByVal sender As Object, ByVal e As DrawListViewColumnHeaderEventArgs) Handles ListView1.DrawColumnHeader
+        Using lgb As New Drawing2D.LinearGradientBrush(Point.Empty, New Point(0, e.Bounds.Height), Color.Gainsboro, Color.Blue)
+            e.Graphics.FillRectangle(lgb, e.Bounds)
+        End Using
+
+        Using strFormat As New StringFormat With {.LineAlignment = StringAlignment.Center}
+            If e.Header.TextAlign = HorizontalAlignment.Center Then
+                strFormat.Alignment = StringAlignment.Center
+            ElseIf e.Header.TextAlign = HorizontalAlignment.Right Then
+                strFormat.Alignment = StringAlignment.Far
+            End If
+
+            Using headerFont As New Font("Arial", 8, FontStyle.Bold)
+                e.Graphics.DrawString(e.Header.Text, headerFont, Brushes.White, e.Bounds, strFormat)
+            End Using
+        End Using
+    End Sub
+
+    Private Sub ListView1_DrawItem(ByVal sender As Object, ByVal e As System.Windows.Forms.DrawListViewItemEventArgs) Handles ListView1.DrawItem
+        e.DrawBackground()
+        e.DrawDefault = True
+    End Sub
+
+    Private Sub ListView1_DrawSubItem(ByVal sender As Object, ByVal e As DrawListViewSubItemEventArgs) Handles ListView1.DrawSubItem
+        e.DrawBackground()
+        e.DrawDefault = True
     End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -13,7 +13,23 @@
     <AssemblyName>VbDemo</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -30,10 +46,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <OutputPath>bin\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <OutputPath>bin\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>myapotek.ico</ApplicationIcon>
@@ -54,8 +72,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.Ribbon, Version=2.0.0.0, Culture=neutral, PublicKeyToken=928736e248aa81f9, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\System.Windows.Forms.Ribbon.dll</HintPath>
+      <HintPath>packages\RibbonWinForms.5.0.1.1\lib\net40\System.Windows.Forms.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -71,10 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessData\AccessDokter.vb" />
+    <Compile Include="AccessData\AccessJenisGolObat.vb" />
     <Compile Include="AccessData\AccessPasien.vb" />
     <Compile Include="AccessData\AccessPelanggan.vb" />
     <Compile Include="AccessData\AccessPengguna.vb" />
     <Compile Include="AccessData\AccessSales.vb" />
+    <Compile Include="AccessData\AccessSubGolonganObat.vb" />
     <Compile Include="AccessData\AccessTBLPerkiraan.vb" />
     <Compile Include="AccessData\AccessSatuan.vb" />
     <Compile Include="AccessData\AccessRak.vb" />
@@ -82,7 +101,6 @@
     <Compile Include="AccessData\AccessProdusen.vb" />
     <Compile Include="AccessData\AccessSupplier.vb" />
     <Compile Include="AccessData\AccessJenis.vb" />
-    <Compile Include="AccessData\AccessSub.vb" />
     <Compile Include="AccessData\AccessBarang.vb" />
     <Compile Include="AccessData\AccessJasa.vb" />
     <Compile Include="AccessData\AccessPaket.vb" />
@@ -348,6 +366,12 @@
     <EmbeddedResource Include="FormInput\frmMstGudang.resx">
       <DependentUpon>frmMstGudang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstJasa.resx">
+      <DependentUpon>frmMstJasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstJenisGolObat.resx">
+      <DependentUpon>frmMstJenisGolObat.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormInput\frmMstPasien.resx">
       <DependentUpon>frmMstPasien.vb</DependentUpon>
     </EmbeddedResource>
@@ -366,6 +390,9 @@
     <EmbeddedResource Include="FormInput\frmMstSatuan.resx">
       <DependentUpon>frmMstSatuan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstSubGolObat.resx">
+      <DependentUpon>frmMstSubGolObat.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\frmApi.resx">
       <DependentUpon>frmApi.vb</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +402,12 @@
     <EmbeddedResource Include="Form\frmGudang.resx">
       <DependentUpon>frmGudang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmJasa.resx">
+      <DependentUpon>frmJasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmJenisGolObat.resx">
+      <DependentUpon>frmJenisGolObat.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\frmProdusen.resx">
       <DependentUpon>frmProdusen.vb</DependentUpon>
     </EmbeddedResource>
@@ -383,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frmSatuan.resx">
       <DependentUpon>frmSatuan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmSubGolObat.resx">
+      <DependentUpon>frmSubGolObat.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
@@ -407,6 +443,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -418,6 +455,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\addons32.png" />
   </ItemGroup>
   <ItemGroup>
@@ -627,7 +665,28 @@
   <ItemGroup>
     <Content Include="myapotek.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

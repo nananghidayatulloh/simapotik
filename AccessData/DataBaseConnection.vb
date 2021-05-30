@@ -2,7 +2,7 @@
 Namespace AccessData
 
     Public Class DataBaseConnection
-        Dim conn As New MySqlConnection("server=localhost;user id=root; database=myapotek_db; pooling=false;Connection Timeout=5")
+        Dim conn As New MySqlConnection("server=localhost;user id=root;password=usbw; database=myapotek_db; pooling=false;Connection Timeout=5")
         Public Function open() As MySqlConnection
             If conn.State <> ConnectionState.Open Then
                 conn.Open()

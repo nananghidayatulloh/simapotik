@@ -103,9 +103,9 @@ Partial Class frmJenisGolObat
         Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(131, 15)
+        Me.Label1.Size = New System.Drawing.Size(142, 15)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "MASTER DATA PASIEN"
+        Me.Label1.Text = "JENIS GOLONGAN OBAT"
         '
         'ListView1
         '
@@ -185,6 +185,7 @@ Partial Class frmJenisGolObat
         'PictureBox1
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.ErrorImage = Global.VbDemo.My.Resources.Resources.find32
         Me.PictureBox1.Location = New System.Drawing.Point(409, 221)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(16, 16)
@@ -192,7 +193,7 @@ Partial Class frmJenisGolObat
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
-        'frmPasien
+        'frmJenisGolObat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -208,8 +209,8 @@ Partial Class frmJenisGolObat
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.KeyPreview = True
-        Me.Name = "frmPasien"
-        Me.Text = "Master Data Dokter"
+        Me.Name = "frmJenisGolObat"
+        Me.Text = "Master Jenis Golongan Obat"
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

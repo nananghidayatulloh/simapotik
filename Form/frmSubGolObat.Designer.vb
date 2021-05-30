@@ -103,9 +103,9 @@ Partial Class frmSubGolObat
         Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(131, 15)
+        Me.Label1.Size = New System.Drawing.Size(216, 15)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "MASTER DATA PASIEN"
+        Me.Label1.Text = "MASTER DATA SUB GOLONGAN OBAT"
         '
         'ListView1
         '
@@ -192,7 +192,7 @@ Partial Class frmSubGolObat
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
-        'frmPasien
+        'frmSubGolObat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -208,8 +208,8 @@ Partial Class frmSubGolObat
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.KeyPreview = True
-        Me.Name = "frmPasien"
-        Me.Text = "Master Data Dokter"
+        Me.Name = "frmSubGolObat"
+        Me.Text = "Master Data Sub Golongan Obat"
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

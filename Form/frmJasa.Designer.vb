@@ -66,7 +66,7 @@ Partial Class frmJasa
         'LineShape2
         '
         Me.LineShape2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LineShape2.BorderColor = System.Drawing.Color.Red
         Me.LineShape2.BorderWidth = 2
         Me.LineShape2.Name = "LineShape2"
@@ -78,7 +78,7 @@ Partial Class frmJasa
         'LineShape1
         '
         Me.LineShape1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LineShape1.BorderColor = System.Drawing.Color.Red
         Me.LineShape1.BorderWidth = 2
         Me.LineShape1.Name = "LineShape1"
@@ -90,7 +90,7 @@ Partial Class frmJasa
         'RectangleShape1
         '
         Me.RectangleShape1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RectangleShape1.BorderColor = System.Drawing.Color.Red
         Me.RectangleShape1.BorderWidth = 2
         Me.RectangleShape1.Location = New System.Drawing.Point(6, 7)
@@ -103,15 +103,15 @@ Partial Class frmJasa
         Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(131, 15)
+        Me.Label1.Size = New System.Drawing.Size(121, 15)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "MASTER DATA PASIEN"
+        Me.Label1.Text = "MASTER DATA JASA"
         '
         'ListView1
         '
         Me.ListView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.ListView1.Location = New System.Drawing.Point(6, 42)
         Me.ListView1.Name = "ListView1"
@@ -192,7 +192,7 @@ Partial Class frmJasa
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
-        'frmPasien
+        'frmJasa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -208,8 +208,8 @@ Partial Class frmJasa
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.KeyPreview = True
-        Me.Name = "frmPasien"
-        Me.Text = "Master Data Dokter"
+        Me.Name = "frmJasa"
+        Me.Text = "Master Data Jasa"
         Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -217,12 +217,8 @@ Partial Class frmJasa
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
-    Friend WithEvents RectangleShape1 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
-    Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
@@ -232,4 +228,8 @@ Partial Class frmJasa
     Friend WithEvents EditToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HapusToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RefreshDataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Private WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Private WithEvents RectangleShape1 As PowerPacks.RectangleShape
+    Private WithEvents LineShape2 As PowerPacks.LineShape
+    Private WithEvents LineShape1 As PowerPacks.LineShape
 End Class
