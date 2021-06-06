@@ -5,6 +5,7 @@
     Dim objDataTable As New DataTable
     Dim bMgr As BindingManagerBase
     Dim JasaBindSource As New BindingSource
+    Dim f, g As Double
 
     Public Property Opt() As Integer
         Get
@@ -54,6 +55,7 @@
         ElseIf opt = 1 Then
             Me.Text = "Input Data Jasa"
             FillCombo()
+            clearText()
         End If
     End Sub
 
@@ -66,11 +68,11 @@
                 TextBox1.Text = obj.IdJasa.ToString
                 TextBox2.Text = obj.NamaJasa
                 TextBox4.Text = obj.Keterangan
-                TextBox5.Text = CDbl(obj.HargaNetto).ToString
-                TextBox6.Text = CDbl(obj.HargaNonResep).ToString
-                TextBox3.Text = CDbl(obj.HargaResep).ToString
-                TextBox7.Text = CDbl(obj.HargaBPJS).ToString
-                TextBox8.Text = CDbl(obj.HargaKhusus).ToString
+                TextBox5.Text = Format(Val(obj.HargaNetto), "###,###")
+                TextBox6.Text = Format(Val(obj.HargaNonResep), "###,###")
+                TextBox3.Text = Format(Val(obj.HargaResep), "###,###")
+                TextBox7.Text = Format(Val(obj.HargaBPJS), "###,###")
+                TextBox8.Text = Format(Val(obj.HargaKhusus), "###,###")
                 ComboBox1.Text = obj.JenisJasa
             Next
 
@@ -160,5 +162,75 @@
                 End Try
             End If
         End If
+    End Sub
+
+    Private Sub TextBox5_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox5.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+
+    End Sub
+
+    Private Sub TextBox5_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox5.TextChanged
+        If TextBox5.Text = "" Or Not IsNumeric(TextBox5.Text) Then
+            Exit Sub
+        End If
+        f = TextBox5.Text
+        TextBox5.Text = Format(Val(f), "###,###")
+        TextBox5.SelectionStart = Len(TextBox5.Text)
+    End Sub
+
+    Private Sub TextBox6_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox6.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+
+    End Sub
+
+    Private Sub TextBox3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox3.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+
+    End Sub
+
+    Private Sub TextBox7_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox7.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+
+    End Sub
+
+    Private Sub TextBox8_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox8.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+
+    End Sub
+
+    Private Sub TextBox6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox6.TextChanged
+        If TextBox6.Text = "" Or Not IsNumeric(TextBox6.Text) Then
+            Exit Sub
+        End If
+        f = TextBox6.Text
+        TextBox6.Text = Format(Val(f), "###,###")
+        TextBox6.SelectionStart = Len(TextBox6.Text)
+    End Sub
+
+    Private Sub TextBox3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged
+        If TextBox3.Text = "" Or Not IsNumeric(TextBox3.Text) Then
+            Exit Sub
+        End If
+        f = TextBox3.Text
+        TextBox3.Text = Format(Val(f), "###,###")
+        TextBox3.SelectionStart = Len(TextBox3.Text)
+    End Sub
+
+    Private Sub TextBox7_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox7.TextChanged
+        If TextBox7.Text = "" Or Not IsNumeric(TextBox7.Text) Then
+            Exit Sub
+        End If
+        f = TextBox7.Text
+        TextBox7.Text = Format(Val(f), "###,###")
+        TextBox7.SelectionStart = Len(TextBox7.Text)
+    End Sub
+
+    Private Sub TextBox8_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox8.TextChanged
+        If TextBox8.Text = "" Or Not IsNumeric(TextBox8.Text) Then
+            Exit Sub
+        End If
+        f = TextBox8.Text
+        TextBox8.Text = Format(Val(f), "###,###")
+        TextBox8.SelectionStart = Len(TextBox8.Text)
     End Sub
 End Class

@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessData\AccessDokter.vb" />
+    <Compile Include="AccessData\AccessJasa.vb" />
     <Compile Include="AccessData\AccessJenisGolObat.vb" />
     <Compile Include="AccessData\AccessPasien.vb" />
     <Compile Include="AccessData\AccessPelanggan.vb" />
@@ -102,13 +103,14 @@
     <Compile Include="AccessData\AccessSupplier.vb" />
     <Compile Include="AccessData\AccessJenis.vb" />
     <Compile Include="AccessData\AccessBarang.vb" />
-    <Compile Include="AccessData\AccessJasa.vb" />
+    <Compile Include="AccessData\AccessObat.vb" />
     <Compile Include="AccessData\AccessPaket.vb" />
     <Compile Include="AccessData\DataBaseConnection.vb" />
     <Compile Include="AccessData\DataControl.vb" />
     <Compile Include="Api\name.vb" />
     <Compile Include="Entity\ArusKas.vb" />
     <Compile Include="Entity\BarangObat.vb" />
+    <Compile Include="Entity\Obat.vb" />
     <Compile Include="Entity\Paket.vb" />
     <Compile Include="Entity\Jasa.vb" />
     <Compile Include="Entity\SubGolonganObat.vb" />

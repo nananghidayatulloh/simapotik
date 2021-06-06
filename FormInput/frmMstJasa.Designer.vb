@@ -30,6 +30,7 @@ Partial Class frmMstJasa
         Me.Button1 = New System.Windows.Forms.Button()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -46,7 +47,6 @@ Partial Class frmMstJasa
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -110,6 +110,17 @@ Partial Class frmMstJasa
         Me.ShapeContainer1.Size = New System.Drawing.Size(548, 348)
         Me.ShapeContainer1.TabIndex = 17
         Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape2
+        '
+        Me.LineShape2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.LineShape2.BorderColor = System.Drawing.Color.Red
+        Me.LineShape2.BorderWidth = 2
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 15
+        Me.LineShape2.X2 = 530
+        Me.LineShape2.Y1 = 339
+        Me.LineShape2.Y2 = 339
         '
         'TextBox2
         '
@@ -239,17 +250,6 @@ Partial Class frmMstJasa
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(209, 20)
         Me.TextBox8.TabIndex = 37
-        '
-        'LineShape2
-        '
-        Me.LineShape2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LineShape2.BorderColor = System.Drawing.Color.Red
-        Me.LineShape2.BorderWidth = 2
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 15
-        Me.LineShape2.X2 = 530
-        Me.LineShape2.Y1 = 339
-        Me.LineShape2.Y2 = 339
         '
         'Label1
         '

@@ -4,20 +4,27 @@ Namespace AccessData
     Public Class AccessPaket
         Private myconnection As New AccessData.DataBaseConnection
 
-        Public Sub DokterInsert(ByVal obj As Dokter)
+        Public Sub PaketInsert(ByVal obj As Paket)
 
             Try
-                Dim StrSQL As String = "INSERT INTO tbl_dokter " & _
-                " (nama_dokter, no_sip, alamat_dokter, kontak_dokter, id_member) " & _
-                " VALUES ( ?nama, ?sip, ?alamat, ?kontak, ?member)"
+                Dim StrSQL As String = "INSERT INTO tbl_Paket " &
+                "(nama_Paket, barcode_Paket,harga_netto,harga_non_resep,harga_resep,harga_bpjs,harga_khusus,created_by,created_date,edited_by,edited_date,id_member) " &
+                " VALUES ( ?nama_Paket, ?barcode_Paket,?harga_netto,?harga_non_resep,?harga_resep,?harga_bpjs,?harga_khusus,?created_by,?created_date,?edited_by,?edited_date,?member)"
                 Dim myCommand As MySqlCommand = New MySqlCommand(StrSQL, myconnection.open)
                 myCommand.CommandType = CommandType.Text
                 With myCommand.Parameters
-                    .AddWithValue("?nama", obj.NamaDokter)
-                    .AddWithValue("?sip", obj.Sip)
-                    .AddWithValue("?alamat", obj.AlamatDokter)
-                    .AddWithValue("?kontak", obj.KontakDokter)
-                    .AddWithValue("?member", obj.IDMember)
+                    .AddWithValue("?nama_Paket", obj.NamaPaket)
+                    .AddWithValue("?barcode_Paket", obj.BarcodePaket)
+                    .AddWithValue("?harga_netto", obj.HargaNetto)
+                    .AddWithValue("?harga_non_resep", obj.HargaNonResep)
+                    .AddWithValue("?harga_resep", obj.HargaResep)
+                    .AddWithValue("?harga_bpjs", obj.HargaBPJS)
+                    .AddWithValue("?harga_khusus", obj.HargaKhusus)
+                    .AddWithValue("?created_by", obj.CreatedBy)
+                    .AddWithValue("?created_date", obj.CreatedDate)
+                    .AddWithValue("?edited_by", obj.ModifiedBy)
+                    .AddWithValue("?edited_date", obj.ModifiedDate)
+                    .AddWithValue("?member", obj.IdMember)
                 End With
                 myCommand.ExecuteNonQuery()
             Catch SqlEx As MySqlException
@@ -27,21 +34,28 @@ Namespace AccessData
         End Sub
 
 
-        Public Sub DokterUpdate(ByVal obj As Dokter)
+        Public Sub PaketUpdate(ByVal obj As Paket)
             Try
-                Dim StrSQL As String = "UPDATE tbl_dokter SET " & _
-                "nama_dokter=?nama,no_sip=?sip,alamat_dokter=?alamat,kontak_dokter=?kontak,id_member=?member " & _
-                " WHERE id_dokter=?id "
+                Dim StrSQL As String = "UPDATE tbl_Paket Set " &
+                "nama_Paket=?nama_Paket, barcode_Paket =?barcode_Paket, harga_netto =?harga_netto, harga_non_resep =?harga_non_resep, harga_resep =?harga_resep, harga_bpjs =?harga_bpjs, harga_netto =?harga_netto, harga_netto =?harga_netto, harga_netto =?harga_netto, harga_netto =?harga_netto, harga_netto =?harga_netto, id_member =?member " &
+                " WHERE id_Paket=?id "
                 Dim myCommand As MySqlCommand = New MySqlCommand(StrSQL, myconnection.open)
                 myCommand.CommandType = CommandType.Text
 
                 With myCommand.Parameters
-                    .AddWithValue("?id", obj.IDDokter)
-                    .AddWithValue("?nama", obj.NamaDokter)
-                    .AddWithValue("?sip", obj.Sip)
-                    .AddWithValue("?alamat", obj.AlamatDokter)
-                    .AddWithValue("?kontak", obj.KontakDokter)
-                    .AddWithValue("?member", obj.IDMember)
+                    .AddWithValue("?id", obj.IdPaket)
+                    .AddWithValue("?nama_Paket", obj.NamaPaket)
+                    .AddWithValue("?barcode_Paket", obj.BarcodePaket)
+                    .AddWithValue("?harga_netto", obj.HargaNetto)
+                    .AddWithValue("?harga_non_resep", obj.HargaNonResep)
+                    .AddWithValue("?harga_resep", obj.HargaResep)
+                    .AddWithValue("?harga_bpjs", obj.HargaBPJS)
+                    .AddWithValue("?harga_khusus", obj.HargaKhusus)
+                    .AddWithValue("?created_by", obj.CreatedBy)
+                    .AddWithValue("?created_date", obj.CreatedDate)
+                    .AddWithValue("?edited_by", obj.ModifiedBy)
+                    .AddWithValue("?edited_date", obj.ModifiedDate)
+                    .AddWithValue("?member", obj.IdMember)
                 End With
                 myCommand.ExecuteNonQuery()
 
@@ -52,8 +66,8 @@ Namespace AccessData
         End Sub
 
 
-        Public Sub DokterDelete(ByVal id_dokter As Integer)
-            Dim myCommand As MySqlCommand = New MySqlCommand("DELETE FROM tbl_dokter WHERE id_dokter='" & id_dokter & "'", myconnection.open)
+        Public Sub PaketDelete(ByVal id_Paket As Integer)
+            Dim myCommand As MySqlCommand = New MySqlCommand("DELETE FROM tbl_Paket WHERE id_Paket='" & id_Paket & "'", myconnection.open)
             Try
                 myCommand.ExecuteNonQuery()
 
@@ -62,26 +76,33 @@ Namespace AccessData
             End Try
         End Sub
 
-        Public Function FindDokterById(ByVal Id As Integer) As List(Of Dokter)
-            Dim dokter As New List(Of Dokter)()
+        Public Function FindPaketById(ByVal Id As Integer) As List(Of Paket)
+            Dim Paket As New List(Of Paket)()
             Try
-                Dim StrSQL As String = "SELECT * FROM tbl_dokter WHERE id_dokter = '" & Id & "'"
+                Dim StrSQL As String = "SELECT * FROM tbl_Paket WHERE id_Paket = '" & Id & "'"
                 Dim myCommand As New MySqlCommand(StrSQL, myconnection.open)
                 Dim rdr As MySqlDataReader = myCommand.ExecuteReader
                 While rdr.Read()
-                    Dim dok As New Dokter()
-                    dok.IDDokter = CInt(rdr("id_dokter"))
-                    dok.NamaDokter = rdr("nama_dokter").ToString()
-                    dok.AlamatDokter = rdr("alamat_dokter").ToString()
-                    dok.Sip = rdr("no_sip").ToString()
-                    dok.KontakDokter = rdr("kontak_dokter").ToString()
-                    dok.IDMember = CInt(rdr("id_member"))
-                    dokter.Add(dok)
+                    Dim x As New Paket()
+                    x.IdPaket = CInt(rdr("id_Paket"))
+                    x.NamaPaket = rdr("nama_Paket").ToString()
+                    x.BarcodePaket = rdr("barcode_Paket").ToString()
+                    x.HargaNetto = CDbl(rdr("harga_netto"))
+                    x.HargaNonResep = CDbl(rdr("harga_non_resep"))
+                    x.HargaResep = CDbl(rdr("harga_resep"))
+                    x.HargaBPJS = CDbl(rdr("harga_bpjs"))
+                    x.HargaKhusus = CDbl(rdr("harga_khusus"))
+                    x.CreatedBy = rdr("nama_Paket").ToString()
+                    x.CreatedDate = rdr("nama_Paket").ToString()
+                    x.ModifiedBy = rdr("nama_Paket").ToString()
+                    x.ModifiedDate = rdr("nama_Paket").ToString()
+                    x.IdMember = CInt(rdr("id_member"))
+                    Paket.Add(x)
                 End While
             Catch sqlex As MySqlException
                 Throw New Exception(sqlex.Message.ToString())
             End Try
-            Return dokter
+            Return Paket
         End Function
 
     End Class

@@ -114,6 +114,8 @@ Partial Class frmMain
         Me.RibbonButton14 = New System.Windows.Forms.RibbonButton()
         Me.RibbonButton15 = New System.Windows.Forms.RibbonButton()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.RibbonPanel16 = New System.Windows.Forms.RibbonPanel()
+        Me.RibbonButton17 = New System.Windows.Forms.RibbonButton()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -790,6 +792,7 @@ Partial Class frmMain
         '
         Me.RibbonTab3.Name = "RibbonTab3"
         Me.RibbonTab3.Panels.Add(Me.RibbonPanel15)
+        Me.RibbonTab3.Panels.Add(Me.RibbonPanel16)
         Me.RibbonTab3.Text = "MASTER PRODUK"
         '
         'RibbonPanel15
@@ -865,6 +868,20 @@ Partial Class frmMain
         'Timer1
         '
         Me.Timer1.Enabled = True
+        '
+        'RibbonPanel16
+        '
+        Me.RibbonPanel16.Items.Add(Me.RibbonButton17)
+        Me.RibbonPanel16.Name = "RibbonPanel16"
+        Me.RibbonPanel16.Text = "RibbonPanel16"
+        '
+        'RibbonButton17
+        '
+        Me.RibbonButton17.Image = CType(resources.GetObject("RibbonButton17.Image"), System.Drawing.Image)
+        Me.RibbonButton17.LargeImage = CType(resources.GetObject("RibbonButton17.LargeImage"), System.Drawing.Image)
+        Me.RibbonButton17.Name = "RibbonButton17"
+        Me.RibbonButton17.SmallImage = CType(resources.GetObject("RibbonButton17.SmallImage"), System.Drawing.Image)
+        Me.RibbonButton17.Text = "RibbonButton17"
         '
         'frmMain
         '
@@ -1087,6 +1104,8 @@ Partial Class frmMain
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents RibbonPanel16 As System.Windows.Forms.RibbonPanel
+    Friend WithEvents RibbonButton17 As System.Windows.Forms.RibbonButton
 
 
 

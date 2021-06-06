@@ -123,4 +123,13 @@
             m_IdMember = value
         End Set
     End Property
+
+    Public Property BarcodePaket As String
+        Get
+            Return m_BarcodePaket
+        End Get
+        Set(value As String)
+            m_BarcodePaket = value
+        End Set
+    End Property
 End Class

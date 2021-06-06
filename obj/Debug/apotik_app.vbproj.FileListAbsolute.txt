@@ -163,3 +163,5 @@ G:\VbDemo\obj\Debug\VbDemo.frmMstSubGolObat.resources
 G:\VbDemo\obj\Debug\VbDemo.frmJasa.resources
 G:\VbDemo\bin\Debug\System.Windows.Forms.Ribbon.dll
 G:\VbDemo\obj\Debug\VbDemo.frmMstJasa.resources
+G:\VbDemo\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+G:\VbDemo\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.xml
