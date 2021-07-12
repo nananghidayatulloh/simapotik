@@ -4,7 +4,7 @@
     Dim DtDataview As New DataView
     Dim objDataTable As New DataTable
     Dim bMgr As BindingManagerBase
-    Dim SalesBindSource As New BindingSource
+    Dim PaketBindSource As New BindingSource
 
     Public Property Opt() As Integer
         Get
@@ -24,62 +24,40 @@
         End Set
     End Property
 
-    ''' <summary>
-    ''' Mengisi Combo Box pertama (provinsi)
-    ''' </summary>
-    Private Sub FillWilayah()
-        Try
-            Dim DataControl As New AccessData.DataControl
-            Dim myData As DataSet = DataControl.GetDataSet("Select * from provinsi")
 
-            ComboBox1.ValueMember = "id_prov"
-            ComboBox1.DisplayMember = "nama"
-            ComboBox1.DataSource = myData.Tables(0)
-        Catch ex As Exception
-            ' infokan ke user, jika ada error
-            MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
-
-
-    Private Sub frmMstSales_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Private Sub frmMstPaket_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim _opt As Integer = Me.Opt
         Dim _data As Integer = Me.Data
         formDesign(_opt, _data)
-
-        FillWilayah()
     End Sub
 
 
 
     Private Sub formDesign(ByVal opt As Integer, ByVal data As Integer)
         If opt = 2 Then
-            Me.Text = "Edit Data Sales"
+            Me.Text = "Edit Data Paket"
             TextBox1.ReadOnly = True
             fillData(data)
 
         ElseIf opt = 1 Then
-            Me.Text = "Input Data Sales"
+            Me.Text = "Input Data Paket"
 
         End If
     End Sub
 
     Private Sub fillData(ByVal id As Integer)
         Try
-            Dim AccessSales As New AccessData.AccessSales
-            Dim Sales As New Sales
-            Dim list As List(Of Sales) = AccessSales.FindSalesById(id)
-            For Each obj As Sales In list
-                TextBox1.Text = obj.IDSales.ToString
-                TextBox2.Text = obj.Nama
-                TextBox3.Text = obj.IDMember.ToString
-                TextBox4.Text = obj.Alamat
-                TextBox5.Text = obj.Kontak
-                TextBox6.Text = obj.Komisi.ToString
-              
-                ComboBox1.Text = obj.Wilayah
+            Dim AccessPaket As New AccessData.AccessPaket
+            Dim Paket As New Paket
+            Dim list As List(Of Paket) = AccessPaket.FindPaketById(id)
+            For Each obj As Paket In list
+                TextBox1.Text = obj.NamaPaket
+                TextBox2.Text = obj.BarcodePaket
+                TextBox3.Text = Format(Val(obj.HargaNetto), "###,###")
+                TextBox4.Text = Format(Val(obj.HargaNonResep), "###,###")
+                TextBox5.Text = Format(Val(obj.HargaResep), "###,###")
+                TextBox6.Text = Format(Val(obj.HargaBPJS), "###,###")
+                TextBox7.Text = Format(Val(obj.HargaKhusus), "###,###")
             Next
 
         Catch ex As Exception
@@ -88,7 +66,7 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        saveSales()
+        savePaket()
     End Sub
 
     Private Sub clearText()
@@ -98,9 +76,7 @@
         TextBox4.Text = ""
         TextBox5.Text = ""
         TextBox6.Text = ""
-
-        ComboBox1.Text = ""
-
+        TextBox7.Text = ""
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -109,11 +85,11 @@
         End If
     End Sub
 
-    Private Sub saveSales()
+    Private Sub savePaket()
         Dim _opt As Integer = Me.Opt
         Dim _data As Integer = Me.Data
-        Dim Sales As New Sales
-        Dim AccessSales As New AccessData.AccessSales
+        Dim Paket As New Paket
+        Dim AccessPaket As New AccessData.AccessPaket
         Dim answer As Integer
         answer = MsgBox("Do you want to Continue?", vbQuestion + vbYesNo, "Konfirmasi")
 
@@ -124,14 +100,12 @@
             If _opt = 1 Then
                 Try
 
-                    Sales.Nama = TextBox2.Text
-                    Sales.Alamat = TextBox4.Text
-                    Sales.Kontak = TextBox5.Text
-                    Sales.Wilayah = ComboBox1.Text
-                   
-                    Sales.Komisi = CDbl(TextBox6.Text)
-                    Sales.IDMember = CInt(TextBox3.Text)
-                    AccessSales.SalesInsert(Sales)
+                    'Paket.Nama = TextBox2.Text
+                    'Paket.Alamat = TextBox4.Text
+                    'Paket.Kontak = TextBox5.Text
+                    'Paket.Komisi = CDbl(TextBox6.Text)
+                    Paket.IdMember = CInt(TextBox3.Text)
+                    AccessPaket.PaketInsert(Paket)
 
                     clearText()
                 Catch ex As Exception
@@ -139,15 +113,13 @@
                 End Try
             ElseIf _opt = 2 Then
                 Try
-                    Sales.IDSales = CInt(TextBox1.Text)
-                    Sales.Nama = TextBox2.Text
-                    Sales.Alamat = TextBox4.Text
-                    Sales.Kontak = TextBox5.Text
-                    Sales.Wilayah = ComboBox1.Text
-                    
-                    Sales.Komisi = CDbl(TextBox6.Text)
-                    Sales.IDMember = CInt(TextBox3.Text)
-                    AccessSales.SalesUpdate(Sales)
+                    Paket.IdPaket = CInt(TextBox1.Text)
+                    'Paket.Nama = TextBox2.Text
+                    'Paket.Alamat = TextBox4.Text
+                    'Paket.Kontak = TextBox5.Text
+                    'Paket.Komisi = CDbl(TextBox6.Text)
+                    Paket.IdMember = CInt(TextBox3.Text)
+                    AccessPaket.PaketUpdate(Paket)
 
                     MsgBox("Data berhasil diupdate")
                     Me.Close()

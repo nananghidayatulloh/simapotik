@@ -2,9 +2,9 @@
     Dim DtDataview As New DataView
     Dim objDataTable As New DataTable
     Dim bMgr As BindingManagerBase
-    Dim SalesBindSource As New BindingSource
+    Dim PaketBindSource As New BindingSource
 
-    Private Sub frmSales_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
+    Private Sub frmPaket_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Escape Then Me.Close()
     End Sub
 
@@ -22,33 +22,33 @@
 
         'menambahkan header kolom
         ListView1.Columns.Add("", 0, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Nama Sales", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Alamat", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Kontak", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Wilayah", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Area", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Sub Area", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Komisi", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Nama Paket", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Barcode", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Harga Netto", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Harga Non Resep", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Harga Resep", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Harga BPJS", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Harga Khusus", 200, HorizontalAlignment.Center)
     End Sub
 
     Public Sub FillListview()
         Try
             Dim DataControl As New AccessData.DataControl
-            Dim myData As DataSet = DataControl.GetDataSet("Select * from tbl_Sales")
+            Dim myData As DataSet = DataControl.GetDataSet("Select * from tbl_Paket")
             objDataTable = myData.Tables("data")
             DtDataview.Table = objDataTable
             ListView1.Items.Clear()
             For i = 0 To (objDataTable.Rows.Count - 1)
                 With objDataTable.Rows(i)
                     Dim lSingleItem As ListViewItem
-                    lSingleItem = ListView1.Items.Add(.Item("id_Sales").ToString)
-                    lSingleItem.SubItems.Add(.Item("nama_Sales").ToString)
-                    lSingleItem.SubItems.Add(.Item("alamat").ToString)
-                    lSingleItem.SubItems.Add(.Item("no_telp").ToString)
-                    lSingleItem.SubItems.Add(.Item("wilayah").ToString)
-                    lSingleItem.SubItems.Add(.Item("area").ToString)
-                    lSingleItem.SubItems.Add(.Item("sub_area").ToString)
-                    lSingleItem.SubItems.Add(.Item("komisi").ToString)
+                    lSingleItem = ListView1.Items.Add(.Item("id_paket").ToString)
+                    lSingleItem.SubItems.Add(.Item("nama_paket").ToString)
+                    lSingleItem.SubItems.Add(.Item("barcode_paket").ToString)
+                    lSingleItem.SubItems.Add(.Item("harga_netto").ToString)
+                    lSingleItem.SubItems.Add(.Item("harga_non_resep").ToString)
+                    lSingleItem.SubItems.Add(.Item("harga_resep").ToString)
+                    lSingleItem.SubItems.Add(.Item("harga_bpjs").ToString)
+                    lSingleItem.SubItems.Add(.Item("harga_khusus").ToString)
                 End With
             Next i
         Catch ex As Exception
@@ -60,7 +60,7 @@
         Next i
     End Sub
 
-    Private Sub frmSales_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub frmPaket_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ListViewDesign()
         FillListview()
     End Sub
@@ -68,21 +68,21 @@
     Private Sub txtSearch_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtSearch.TextChanged
         Try
             Dim DataControl As New AccessData.DataControl
-            Dim myData As DataSet = DataControl.GetDataSet("Select * from tbl_Sales where nama_Sales like '" & txtSearch.Text & "%'")
+            Dim myData As DataSet = DataControl.GetDataSet("Select * from tbl_Paket where nama_Paket like '" & txtSearch.Text & "%'")
             objDataTable = myData.Tables("data")
             DtDataview.Table = objDataTable
             ListView1.Items.Clear()
             For i = 0 To (objDataTable.Rows.Count - 1)
                 With objDataTable.Rows(i)
                     Dim lSingleItem As ListViewItem
-                    lSingleItem = ListView1.Items.Add(.Item("id_Sales").ToString)
-                    lSingleItem.SubItems.Add(.Item("nama_Sales").ToString)
-                    lSingleItem.SubItems.Add(.Item("alamat").ToString)
-                    lSingleItem.SubItems.Add(.Item("no_telp").ToString)
-                    lSingleItem.SubItems.Add(.Item("wilayah").ToString)
-                    lSingleItem.SubItems.Add(.Item("area").ToString)
-                    lSingleItem.SubItems.Add(.Item("sub_area").ToString)
-                    lSingleItem.SubItems.Add(.Item("komisi").ToString)
+                    lSingleItem = ListView1.Items.Add(.Item("id_paket").ToString)
+                    lSingleItem.SubItems.Add(.Item("nama_paket").ToString)
+                    lSingleItem.SubItems.Add(.Item("barcode_paket").ToString)
+                    lSingleItem.SubItems.Add(.Item("harga_netto").ToString)
+                    lSingleItem.SubItems.Add(.Item("harga_non_resep").ToString)
+                    lSingleItem.SubItems.Add(.Item("harga_resep").ToString)
+                    lSingleItem.SubItems.Add(.Item("harga_bpjs").ToString)
+                    lSingleItem.SubItems.Add(.Item("harga_khusus").ToString)
                 End With
             Next i
         Catch ex As Exception
@@ -92,9 +92,9 @@
 
     Private Sub ListView1_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListView1.DoubleClick
         Dim x As Integer = CInt(ListView1.SelectedItems(0).Index)
-        frmMstSales.Data = CInt(ListView1.Items(x).SubItems(0).Text)
-        frmMstSales.Opt = 2
-        frmMstSales.ShowDialog()
+        frmMstPaket.Data = CInt(ListView1.Items(x).SubItems(0).Text)
+        frmMstPaket.Opt = 2
+        frmMstPaket.ShowDialog()
     End Sub
 
     'Private Sub ListView1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListView1.Click
@@ -116,10 +116,10 @@
 
         If MsgBox("Anda yakin ingin menghapus data : " & ListView1.Items(x).SubItems(1).Text & "?", MsgBoxStyle.Information Or MsgBoxStyle.YesNo, "Konfirmasi") = MsgBoxResult.Yes Then
             Try
-                Dim Sales As New Sales
-                Dim AccessSales As New AccessData.AccessSales
-                Sales.IDSales = CInt(ListView1.Items(x).SubItems(0).Text)
-                AccessSales.SalesDelete(Sales.IDSales)
+                Dim Paket As New Paket
+                Dim AccessPaket As New AccessData.AccessPaket
+                Paket.IdPaket = CInt(ListView1.Items(x).SubItems(0).Text)
+                AccessPaket.PaketDelete(Paket.IdPaket)
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
@@ -128,16 +128,16 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        frmMstSales.Opt = 1
-        frmMstSales.ShowDialog()
+        frmMstPaket.Opt = 1
+        frmMstPaket.ShowDialog()
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         If ListView1.SelectedItems.Count > 0 Then
             Dim x As Integer = CInt(ListView1.SelectedItems(0).Index)
-            frmMstSales.Data = CInt(ListView1.Items(x).SubItems(0).Text)
-            frmMstSales.Opt = 2
-            frmMstSales.ShowDialog()
+            frmMstPaket.Data = CInt(ListView1.Items(x).SubItems(0).Text)
+            frmMstPaket.Opt = 2
+            frmMstPaket.ShowDialog()
         Else
             MsgBox("Silahkan pilih data yang akan diubah")
         End If
@@ -149,10 +149,10 @@
             'MsgBox(ListView1.Items(x).SubItems(0).Text)
             If MsgBox("Anda yakin ingin menghapus data :  " & ListView1.Items(x).SubItems(1).Text & "?", MsgBoxStyle.Information Or MsgBoxStyle.YesNo, "Konfirmasi") = MsgBoxResult.Yes Then
                 Try
-                    Dim Sales As New Sales
-                    Dim AccessSales As New AccessData.AccessSales
-                    Sales.IDSales = CInt(ListView1.Items(x).SubItems(0).Text)
-                    AccessSales.SalesDelete(Sales.IDSales)
+                    Dim Paket As New Paket
+                    Dim AccessPaket As New AccessData.AccessPaket
+                    Paket.IdPaket = CInt(ListView1.Items(x).SubItems(0).Text)
+                    AccessPaket.PaketDelete(Paket.IdPaket)
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
@@ -165,9 +165,9 @@
 
     Private Sub EditToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditToolStripMenuItem.Click
         Dim x As Integer = CInt(ListView1.SelectedItems(0).Index)
-        frmMstSales.Data = CInt(ListView1.Items(x).SubItems(0).Text)
-        frmMstSales.Opt = 2
-        frmMstSales.ShowDialog()
+        frmMstPaket.Data = CInt(ListView1.Items(x).SubItems(0).Text)
+        frmMstPaket.Opt = 2
+        frmMstPaket.ShowDialog()
     End Sub
 
     Private Sub RefreshDataToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshDataToolStripMenuItem.Click

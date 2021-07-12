@@ -105,6 +105,8 @@ Partial Class frmMain
         Me.RibbonTab3 = New System.Windows.Forms.RibbonTab()
         Me.RibbonPanel15 = New System.Windows.Forms.RibbonPanel()
         Me.RibbonButton16 = New System.Windows.Forms.RibbonButton()
+        Me.RibbonPanel16 = New System.Windows.Forms.RibbonPanel()
+        Me.RibbonButton17 = New System.Windows.Forms.RibbonButton()
         Me.RibbonTab4 = New System.Windows.Forms.RibbonTab()
         Me.RibbonPanel14 = New System.Windows.Forms.RibbonPanel()
         Me.RibbonButton13 = New System.Windows.Forms.RibbonButton()
@@ -114,8 +116,8 @@ Partial Class frmMain
         Me.RibbonButton14 = New System.Windows.Forms.RibbonButton()
         Me.RibbonButton15 = New System.Windows.Forms.RibbonButton()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.RibbonPanel16 = New System.Windows.Forms.RibbonPanel()
-        Me.RibbonButton17 = New System.Windows.Forms.RibbonButton()
+        Me.RibbonPanel17 = New System.Windows.Forms.RibbonPanel()
+        Me.RibbonButton18 = New System.Windows.Forms.RibbonButton()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -793,6 +795,7 @@ Partial Class frmMain
         Me.RibbonTab3.Name = "RibbonTab3"
         Me.RibbonTab3.Panels.Add(Me.RibbonPanel15)
         Me.RibbonTab3.Panels.Add(Me.RibbonPanel16)
+        Me.RibbonTab3.Panels.Add(Me.RibbonPanel17)
         Me.RibbonTab3.Text = "MASTER PRODUK"
         '
         'RibbonPanel15
@@ -808,6 +811,20 @@ Partial Class frmMain
         Me.RibbonButton16.Name = "RibbonButton16"
         Me.RibbonButton16.SmallImage = CType(resources.GetObject("RibbonButton16.SmallImage"), System.Drawing.Image)
         Me.RibbonButton16.Text = "RibbonButton16"
+        '
+        'RibbonPanel16
+        '
+        Me.RibbonPanel16.Items.Add(Me.RibbonButton17)
+        Me.RibbonPanel16.Name = "RibbonPanel16"
+        Me.RibbonPanel16.Text = "RibbonPanel16"
+        '
+        'RibbonButton17
+        '
+        Me.RibbonButton17.Image = CType(resources.GetObject("RibbonButton17.Image"), System.Drawing.Image)
+        Me.RibbonButton17.LargeImage = CType(resources.GetObject("RibbonButton17.LargeImage"), System.Drawing.Image)
+        Me.RibbonButton17.Name = "RibbonButton17"
+        Me.RibbonButton17.SmallImage = CType(resources.GetObject("RibbonButton17.SmallImage"), System.Drawing.Image)
+        Me.RibbonButton17.Text = "RibbonButton17"
         '
         'RibbonTab4
         '
@@ -869,19 +886,19 @@ Partial Class frmMain
         '
         Me.Timer1.Enabled = True
         '
-        'RibbonPanel16
+        'RibbonPanel17
         '
-        Me.RibbonPanel16.Items.Add(Me.RibbonButton17)
-        Me.RibbonPanel16.Name = "RibbonPanel16"
-        Me.RibbonPanel16.Text = "RibbonPanel16"
+        Me.RibbonPanel17.Items.Add(Me.RibbonButton18)
+        Me.RibbonPanel17.Name = "RibbonPanel17"
+        Me.RibbonPanel17.Text = "RibbonPanel17"
         '
-        'RibbonButton17
+        'RibbonButton18
         '
-        Me.RibbonButton17.Image = CType(resources.GetObject("RibbonButton17.Image"), System.Drawing.Image)
-        Me.RibbonButton17.LargeImage = CType(resources.GetObject("RibbonButton17.LargeImage"), System.Drawing.Image)
-        Me.RibbonButton17.Name = "RibbonButton17"
-        Me.RibbonButton17.SmallImage = CType(resources.GetObject("RibbonButton17.SmallImage"), System.Drawing.Image)
-        Me.RibbonButton17.Text = "RibbonButton17"
+        Me.RibbonButton18.Image = CType(resources.GetObject("RibbonButton18.Image"), System.Drawing.Image)
+        Me.RibbonButton18.LargeImage = CType(resources.GetObject("RibbonButton18.LargeImage"), System.Drawing.Image)
+        Me.RibbonButton18.Name = "RibbonButton18"
+        Me.RibbonButton18.SmallImage = CType(resources.GetObject("RibbonButton18.SmallImage"), System.Drawing.Image)
+        Me.RibbonButton18.Text = "RibbonButton18"
         '
         'frmMain
         '
@@ -1106,6 +1123,8 @@ Partial Class frmMain
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents RibbonPanel16 As System.Windows.Forms.RibbonPanel
     Friend WithEvents RibbonButton17 As System.Windows.Forms.RibbonButton
+    Friend WithEvents RibbonPanel17 As System.Windows.Forms.RibbonPanel
+    Friend WithEvents RibbonButton18 As System.Windows.Forms.RibbonButton
 
 
 

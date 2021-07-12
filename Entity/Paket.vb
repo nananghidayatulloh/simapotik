@@ -1,13 +1,11 @@
 ﻿Public Class Paket
     Private m_NamaPaket As String
     Private m_BarcodePaket As String
-
     Private m_HargaNetto As Double
     Private m_HargaNonResep As Double
     Private m_HargaResep As Double
     Private m_HargaBPJS As Double
     Private m_HargaKhusus As Double
-
     Private m_CreatedBy As String
     Private m_CreatedDate As String
     Private m_ModifiedBy As String

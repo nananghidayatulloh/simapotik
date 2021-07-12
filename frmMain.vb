@@ -174,4 +174,14 @@ Public Class frmMain
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         ToolStripStatusLabel2.Text = DateTime.Now.ToString("dd MMM yyyy hh:mm:ss")
     End Sub
+
+    Private Sub RibbonButton18_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RibbonButton18.Click
+        Dim x As New frmPaket
+        x.MdiParent = Me
+        x.ControlBox = False
+        x.MinimizeBox = False
+        x.MaximizeBox = False
+        x.WindowState = FormWindowState.Maximized
+        x.Show()
+    End Sub
 End Class

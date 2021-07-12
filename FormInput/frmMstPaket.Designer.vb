@@ -43,10 +43,8 @@ Partial Class frmMstPaket
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -71,7 +69,7 @@ Partial Class frmMstPaket
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(351, 221)
+        Me.Button2.Location = New System.Drawing.Point(167, 221)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(80, 25)
         Me.Button2.TabIndex = 12
@@ -81,7 +79,7 @@ Partial Class frmMstPaket
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(436, 221)
+        Me.Button1.Location = New System.Drawing.Point(252, 221)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(80, 25)
         Me.Button1.TabIndex = 9
@@ -106,7 +104,7 @@ Partial Class frmMstPaket
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(535, 260)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(351, 260)
         Me.ShapeContainer1.TabIndex = 17
         Me.ShapeContainer1.TabStop = False
         '
@@ -133,7 +131,7 @@ Partial Class frmMstPaket
         '
         Me.TextBox2.Location = New System.Drawing.Point(121, 34)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(395, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(209, 20)
         Me.TextBox2.TabIndex = 19
         '
         'TextBox3
@@ -147,7 +145,7 @@ Partial Class frmMstPaket
         '
         Me.TextBox4.Location = New System.Drawing.Point(121, 82)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(395, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(209, 20)
         Me.TextBox4.TabIndex = 21
         '
         'TextBox5
@@ -159,7 +157,7 @@ Partial Class frmMstPaket
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(121, 180)
+        Me.TextBox6.Location = New System.Drawing.Point(121, 157)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(209, 20)
         Me.TextBox6.TabIndex = 23
@@ -169,98 +167,78 @@ Partial Class frmMstPaket
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(13, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 13)
+        Me.Label1.Size = New System.Drawing.Size(66, 13)
         Me.Label1.TabIndex = 24
-        Me.Label1.Text = "Kode Pasien"
+        Me.Label1.Text = "Nama Paket"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(13, 37)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 13)
+        Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 25
-        Me.Label2.Text = "Nama Pasien"
+        Me.Label2.Text = "Barcode"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(13, 61)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 13)
+        Me.Label3.Size = New System.Drawing.Size(65, 13)
         Me.Label3.TabIndex = 26
-        Me.Label3.Text = "Nomor BPJS"
+        Me.Label3.Text = "Harga Netto"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(13, 85)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.Size = New System.Drawing.Size(93, 13)
         Me.Label4.TabIndex = 27
-        Me.Label4.Text = "Alamat"
+        Me.Label4.Text = "Harga Non Resep"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(13, 109)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 13)
+        Me.Label5.Size = New System.Drawing.Size(70, 13)
         Me.Label5.TabIndex = 28
-        Me.Label5.Text = "No Contact"
+        Me.Label5.Text = "Harga Resep"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(13, 183)
+        Me.Label6.Location = New System.Drawing.Point(13, 160)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(59, 13)
+        Me.Label6.Size = New System.Drawing.Size(74, 13)
         Me.Label6.TabIndex = 29
-        Me.Label6.Text = "ID Member"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(13, 157)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(72, 13)
-        Me.Label7.TabIndex = 33
-        Me.Label7.Text = "Tanggal Lahir"
+        Me.Label6.Text = "Harga Khusus"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(13, 133)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(71, 13)
+        Me.Label8.Size = New System.Drawing.Size(65, 13)
         Me.Label8.TabIndex = 32
-        Me.Label8.Text = "Jenis Kelamin"
+        Me.Label8.Text = "Harga BPJS"
         '
-        'ComboBox1
+        'TextBox7
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(121, 130)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(209, 21)
-        Me.ComboBox1.TabIndex = 34
+        Me.TextBox7.Location = New System.Drawing.Point(121, 130)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(209, 20)
+        Me.TextBox7.TabIndex = 33
         '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(121, 155)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(209, 20)
-        Me.DateTimePicker1.TabIndex = 35
-        Me.DateTimePicker1.Value = New Date(2020, 12, 21, 9, 55, 56, 0)
-        '
-        'frmMstPasien
+        'frmMstPaket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(535, 260)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label7)
+        Me.ClientSize = New System.Drawing.Size(351, 260)
+        Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -279,7 +257,7 @@ Partial Class frmMstPaket
         Me.Controls.Add(Me.ShapeContainer1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "frmMstPasien"
+        Me.Name = "frmMstPaket"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmMstDokter"
         Me.ContextMenuStrip1.ResumeLayout(False)
@@ -307,8 +285,6 @@ Partial Class frmMstPaket
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
 End Class

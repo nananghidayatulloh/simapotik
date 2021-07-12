@@ -14,7 +14,8 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -136,6 +137,48 @@
     <Compile Include="Entity\TBLPerkiraan.vb" />
     <Compile Include="Entity\TBLPerusahaan.vb" />
     <Compile Include="Entity\TBLUser.vb" />
+    <Compile Include="FormInput\frmLoadSales.Designer.vb">
+      <DependentUpon>frmLoadSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmLoadSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmLoadDokter.Designer.vb">
+      <DependentUpon>frmLoadDokter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmLoadDokter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmLoadPasien.Designer.vb">
+      <DependentUpon>frmLoadPasien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmLoadPasien.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmLoadPaket.Designer.vb">
+      <DependentUpon>frmLoadPaket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmLoadPaket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmLoadPelanggan.Designer.vb">
+      <DependentUpon>frmLoadPelanggan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmLoadPelanggan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmLoadObat.Designer.vb">
+      <DependentUpon>frmLoadObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmLoadObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInput\frmLoadJasa.Designer.vb">
+      <DependentUpon>frmLoadJasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInput\frmLoadJasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormInput\frmMstPaket.Designer.vb">
       <DependentUpon>frmMstPaket.vb</DependentUpon>
     </Compile>
@@ -230,6 +273,18 @@
       <DependentUpon>frmMstSales.vb</DependentUpon>
     </Compile>
     <Compile Include="FormInput\frmMstSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaksi\frmTransaksiPenjualan.Designer.vb">
+      <DependentUpon>frmTransaksiPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaksi\frmTransaksiPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransaksi\frmPOS.Designer.vb">
+      <DependentUpon>frmPOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransaksi\frmPOS.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\frmPaket.Designer.vb">
@@ -342,6 +397,13 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module\General.vb" />
+    <Compile Include="Module\Print..vb" />
+    <Compile Include="Module\Printer.vb" />
+    <Compile Include="Module\PrintingFormat.vb" />
+    <Compile Include="Module\Resizer.vb" />
+    <Compile Include="Module\TextPrint.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -359,8 +421,29 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormInput\frmLoadSales.resx">
+      <DependentUpon>frmLoadSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmLoadDokter.resx">
+      <DependentUpon>frmLoadDokter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmLoadPasien.resx">
+      <DependentUpon>frmLoadPasien.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmLoadPaket.resx">
+      <DependentUpon>frmLoadPaket.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormInput\frmInputAkun.resx">
       <DependentUpon>frmInputAkun.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmLoadPelanggan.resx">
+      <DependentUpon>frmLoadPelanggan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmLoadObat.resx">
+      <DependentUpon>frmLoadObat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmLoadJasa.resx">
+      <DependentUpon>frmLoadJasa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInput\frmMstDokter.resx">
       <DependentUpon>frmMstDokter.vb</DependentUpon>
@@ -373,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInput\frmMstJenisGolObat.resx">
       <DependentUpon>frmMstJenisGolObat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInput\frmMstPaket.resx">
+      <DependentUpon>frmMstPaket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInput\frmMstPasien.resx">
       <DependentUpon>frmMstPasien.vb</DependentUpon>
@@ -395,6 +481,12 @@
     <EmbeddedResource Include="FormInput\frmMstSubGolObat.resx">
       <DependentUpon>frmMstSubGolObat.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaksi\frmTransaksiPenjualan.resx">
+      <DependentUpon>frmTransaksiPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransaksi\frmPOS.resx">
+      <DependentUpon>frmPOS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\frmApi.resx">
       <DependentUpon>frmApi.vb</DependentUpon>
     </EmbeddedResource>
@@ -409,6 +501,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frmJenisGolObat.resx">
       <DependentUpon>frmJenisGolObat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmPaket.resx">
+      <DependentUpon>frmPaket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frmProdusen.resx">
       <DependentUpon>frmProdusen.vb</DependentUpon>

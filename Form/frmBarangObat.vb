@@ -22,13 +22,13 @@
 
         'menambahkan header kolom
         ListView1.Columns.Add("", 0, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Nama BarangObat", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Alamat", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Kontak", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Wilayah", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Area", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Sub Area", 200, HorizontalAlignment.Center)
-        ListView1.Columns.Add("Komisi", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Nama Obat", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Kode Obat", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Barcode Obat", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Jenis", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Golongan", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Sub Golongan", 200, HorizontalAlignment.Center)
+        ListView1.Columns.Add("Merk", 200, HorizontalAlignment.Center)
     End Sub
 
     Public Sub FillListview()

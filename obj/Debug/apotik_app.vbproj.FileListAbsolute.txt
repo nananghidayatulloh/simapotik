@@ -163,5 +163,14 @@ G:\VbDemo\obj\Debug\VbDemo.frmMstSubGolObat.resources
 G:\VbDemo\obj\Debug\VbDemo.frmJasa.resources
 G:\VbDemo\bin\Debug\System.Windows.Forms.Ribbon.dll
 G:\VbDemo\obj\Debug\VbDemo.frmMstJasa.resources
-G:\VbDemo\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
-G:\VbDemo\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.xml
+G:\VbDemo\obj\Debug\VbDemo.frmPaket.resources
+G:\VbDemo\obj\Debug\VbDemo.frmMstPaket.resources
+G:\VbDemo\obj\Debug\VbDemo.frmPOS.resources
+G:\VbDemo\obj\Debug\VbDemo.frmTransaksiPenjualan.resources
+G:\VbDemo\obj\Debug\VbDemo.frmLoadPelanggan.resources
+G:\VbDemo\obj\Debug\VbDemo.frmLoadObat.resources
+G:\VbDemo\obj\Debug\VbDemo.frmLoadJasa.resources
+G:\VbDemo\obj\Debug\VbDemo.frmLoadPaket.resources
+G:\VbDemo\obj\Debug\VbDemo.frmLoadPasien.resources
+G:\VbDemo\obj\Debug\VbDemo.frmLoadDokter.resources
+G:\VbDemo\obj\Debug\VbDemo.frmLoadSales.resources

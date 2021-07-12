@@ -125,7 +125,7 @@
                     x.HargaNonResep = CDbl(TextBox6.Text)
                     x.HargaResep = CDbl(TextBox3.Text)
                     x.HargaBPJS = CDbl(TextBox7.Text)
-                    x.HargaKhusus = CInt(TextBox8.Text)
+                    x.HargaKhusus = CDbl(TextBox8.Text)
                     x.CreatedBy = frmMain.ToolStripStatusLabel1.Text
                     x.CreatedDate = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")
                     x.ModifiedBy = frmMain.ToolStripStatusLabel1.Text
