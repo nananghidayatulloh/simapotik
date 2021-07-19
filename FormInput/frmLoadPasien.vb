@@ -31,4 +31,9 @@
 
 
     End Sub
+
+    Private Sub dgw_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles dgw.DoubleClick
+        frmTransaksiPenjualan.ComboBox2.Text = dgw.CurrentRow.Cells(1).Value.ToString
+        Me.Close()
+    End Sub
 End Class
